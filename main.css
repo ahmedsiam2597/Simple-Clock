@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2f3236;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    max-width: 1200px;
+    padding:  0 15px ;
+}
+.clock{
+    width: 280px;
+    height: 280px;
+    background-color: #2f3236;
+    border: 4px solid #2f3236;
+    border-radius:50% ;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
+    box-shadow:  0 -15px 30px rgba(255,255,255,.05),  
+    inset 0 -15px 15px rgba(255,255,255,.05),
+    0 15px 20px rgba(0,0,0,.3),
+    inset 0 15px 15px rgba(0,0,0,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color:  #777;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 10;
+}
+.clock > span{
+    position: absolute;
+    inset: 20px;
+    transform: rotate(calc(30deg * var(--i)));
+    -webkit-transform: rotate(calc(30deg * var(--i)));
+    -moz-transform: rotate(calc(30deg * var(--i)));
+    -ms-transform: rotate(calc(30deg * var(--i)));
+    -o-transform: rotate(calc(30deg * var(--i)));
+    text-align: center;
+    color: #777;
+    font-size: 25px;
+}
+.clock span.active{
+    color: #ff007b;
+}
+.clock span b{
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+    -webkit-transform: rotate(calc(-30deg * var(--i)));
+    -moz-transform: rotate(calc(-30deg * var(--i)));
+    -ms-transform: rotate(calc(-30deg * var(--i)));
+    -o-transform: rotate(calc(-30deg * var(--i)));
+}
+
+
+.circle{
+    position: absolute;
+    width: var(--wh);
+    height: var(--wh);
+    border: 2px solid rgba(0,0,0,.06);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.circle:first-of-type , .circle:nth-last-of-type(2){
+    border: none;
+}
+
+
+
+.circle i{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 50%;
+    width: var(--w);
+    background-color: var(--clr);
+    transform: scale(var(--s));
+    -webkit-transform: scale(var(--s));
+    -moz-transform: scale(var(--s));
+    -ms-transform: scale(var(--s));
+    -o-transform: scale(var(--s));
+    transform-origin: bottom;
+    opacity: .9;
+}
+.circle:nth-last-of-type(2) i{
+    z-index: 6;
+}
+
+
+.circle:last-of-type i{
+    height: 60%;
+    z-index: 8;
+}
+.circle:last-of-type i::before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    /* background-color: var(--clr); */
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 -47px 20px var(--clr) ,  0 -47px 30px var(--clr) , 0 -47px 40px var(--clr) ;
+}
+
+
+
+
+.dig-clock{
+    width: 280px;
+    height: 100px;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #2f3236;
+    border: 4px solid #2f3236;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+    box-shadow:  0 -15px 30px rgba(255,255,255,.03), 
+    inset 0 -15px 15px rgba(255,255,255,.03),
+     0 15px 20px rgba(0,0,0,.3),
+     inset 0 15px 15px rgba(0,0,0,.3);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 5px;
+     font-size: 30px;
+     font-weight: 700;
+     color: #fff;
+}
+.dig-clock span{
+    width: calc(100% / 4);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr);
+    display: flex;
+}
+.dig-clock span:last-of-type{
+    font-size: 20px;
+}
+.dig-clock span::before{
+    content: "";
+    position: absolute;
+    margin-top: 50px;
+    font-size: 12px;
+    color: var(--clr);
+}
+.dig-clock span:first-of-type:before{
+    content: "H";
+}
+.dig-clock span:nth-of-type(2):before{
+    content: "M";
+}
+.dig-clock span:nth-of-type(3):before{
+    content: "S";
+}

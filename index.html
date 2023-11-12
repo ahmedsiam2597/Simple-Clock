@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+<div class="container">
+    <div class="clock">
+
+        <span style="--i:1;" data-num="1"><b>1</b></span>
+        <span style="--i:2;" data-num="2"><b>2</b></span>
+        <span style="--i:3;" data-num="3"><b>3</b></span>
+        <span style="--i:4;" data-num="4"><b>4</b></span>
+        <span style="--i:5;" data-num="5"><b>5</b></span>
+        <span style="--i:6;" data-num="6"><b>6</b></span>
+        <span style="--i:7;" data-num="7"><b>7</b></span>
+        <span style="--i:8;" data-num="8"><b>8</b></span>
+        <span style="--i:9;" data-num="9"><b>9</b></span>
+        <span style="--i:10;" data-num="10"><b>10</b></span>
+        <span style="--i:11;" data-num="11"><b>11</b></span>
+        <span style="--i:12;" data-num="0"><b>12</b></span>
+        <div class="circle" style="--wh:90px" id="hours"><i style="--s:.7;--clr:#ff007b;--w:3px"></i></div>
+        <div class="circle" style="--wh:130px" id="minutes"><i style="--s:.75;--clr:#00807a;--w:2px"></i></div>
+        <div class="circle" style="--wh:160px" id="seconds"><i style="--s:.85;--clr:#f7f7f7;--w:1px"></i></div>
+
+    </div>
+    <div class="dig-clock">
+        <span id="d-hh" style="--clr:#ff007b;"></span> :
+        <span id="d-mm" style="--clr:#00807a;"></span> :
+        <span id="d-ss" style="--clr:#ccc;"></span> 
+        <span id="ampm" style="--clr:#ccc;"></span>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
