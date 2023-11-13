@@ -15,18 +15,22 @@ setInterval(() => {
 
 function clock() {
   let currentTime = new Date();
-  let hh = currentTime.getHours() * 30;
+  let hh = currentTime.getHours()  * 30;
   let mm = currentTime.getMinutes() * 6;
   let ss = currentTime.getSeconds() * 6;
+  let activeTime = currentTime.getHours();
   hours.style.transform = `rotate(${hh+(mm/12)}deg)`;
   minutes.style.transform = `rotate(${mm}deg)`;
   seconds.style.transform = `rotate(${ss}deg)`;
-  allSpan.forEach((span) => {
+  
+  allSpan.forEach(span=>{
     span.classList.remove("active");
-    if (span.getAttribute("data-num") == currentTime.getHours()) {
+    if(span.dataset.num == activeTime ){
       span.classList.add("active");
     }
-  });
+    
+  })
+
 }
 
 function digClock() {
