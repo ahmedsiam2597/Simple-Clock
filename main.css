@@ -147,6 +147,7 @@ body{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    box-shadow: 0 -47px 30px var(--clr) , 0 -47px 40px var(--clr) ,0 -47px 50px var(--clr) ;
 
 }
 
