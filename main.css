@@ -61,9 +61,7 @@ body{
     color: #888;
     font-size: 25px;
 }
-.clock span.active{
-    color: #ff007b;
-}
+
 .clock span b{
     display: flex;
     align-items: center;
