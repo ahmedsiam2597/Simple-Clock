@@ -1,7 +1,6 @@
 let hours = document.getElementById("hours");
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
-let allSpan = document.querySelectorAll(".clock span");
 
 let digHours = document.getElementById("d-hh");
 let digMinutes = document.getElementById("d-mm");
